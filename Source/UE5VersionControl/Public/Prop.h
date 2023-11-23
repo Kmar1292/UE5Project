@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Prop.generated.h"
 
+class UStaticMeshComponent;
+
 UCLASS()
 class UE5VERSIONCONTROL_API AProp : public AActor
 {
@@ -23,4 +25,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+private:
+	UPROPERTY(EditAnywhere)
+	class UStaticMeshComponent* MeshComp;
 };
